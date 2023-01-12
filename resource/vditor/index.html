@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <base href="{{baseUrl}}/">
+    <link rel="stylesheet" href="./dist/index.css" />
+    <script src="./dist/js/i18n/zh_CN.js" id="vditorI18nScriptzh_CN"></script>
+    <script src="./dist/js/lute/lute.min.js" id="vditorLuteScript"></script>
+
+    <!-- highlight -->
+    <script src="./dist/js/highlight.js/highlight.pack.js" async="" id="vditorHljsScript"></script>
+    <script src="./dist/js/highlight.js/solidity.min.js" async="" id="vditorHljsSolidityScript"></script>
+    <script src="./dist/js/highlight.js/yul.min.js" async="" id="vditorHljsYulScript"></script>
+    <link id="codecss" rel="stylesheet" type="text/css" href="./dist/js/highlight.js/styles/github.css">
+    <!-- mermaid -->
+    <script src="./dist/js/mermaid/mermaid.min.js" async="" id="vditorMermaidScript"></script>
+    <!-- ketax -->
+    <link id="vditorKatexStyle" rel="stylesheet" type="text/css" href="./dist/js/katex/katex.min.css">
+    <script src="./dist/js/katex/katex.min.js" async="" id="vditorKatexScript"></script>
+    <script src="./dist/js/katex/mhchem.min.js" async="" id="vditorKatexChemScript"></script>
+    <!-- echarts -->
+    <script src="./dist/js/echarts/echarts.min.js" async="" id="vditorEchartsScript"></script>
+    <!-- markmap -->
+    <script src="./dist/js/markmap/markmap.min.js" async="" id="vditorMarkmapScript"></script>
+
+    <script src="./dist/index.min.js"></script>
+    <link rel="stylesheet" href="../lib/context_material.min.css" />
+  </head>
+  <body>
+    <div id="vditor"></div>
+    <div class="dropdown-menu dropdown-menu-sm" id="context-menu" style="display: none;">
+      <a class="dropdown-item" id="copy" href="#">Copy</a>
+      <a class="dropdown-item" id="paste" href="#">Paste</a>
+      <a class="dropdown-item" id="Outline" href="#">Outline</a>
+      <a class="dropdown-item" id="EditInVscode" href="#">Edit In Vscode</a>
+      <a class="dropdown-item" id="exportPdf" href="#">Export PDF</a>
+      <a class="dropdown-item" id="exportDocx" href="#">Export Docx</a>
+      <a class="dropdown-item" id="exportHtml" href="#">Export HTML</a>
+  </div>
+  </body>
+  <script src="../lib/vscode.js"></script>
+  <script src="./index.js" type="module"></script>
+</html>
