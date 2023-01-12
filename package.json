@@ -2,7 +2,7 @@
   "name": "markdownk",
   "displayName": "markdownK",
   "description": "a markdown editor (wysiwyg), based on vditor (My own modified version)",
-  "version": "0.0.1",
+  "version": "0.5.0",
   "publisher": "kzer",
   "engines": {
     "vscode": "^1.74.0"

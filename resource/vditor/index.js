@@ -5,7 +5,6 @@ handler.on("open", (md) => {
   if (config.autoTheme) {
     addAutoTheme(md.rootPath)
   }
-  window.mdContent = md.content
   window.editor = new Vditor('vditor', {
     value: md.content,
     cdn: "",
@@ -66,4 +65,3 @@ function addAutoTheme(rootPath) {
   style.href = `${rootPath}/css/theme.css`;
   document.documentElement.appendChild(style)
 }
-
