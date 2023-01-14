@@ -5,6 +5,8 @@
 该缓存文件夹的具体位置为：
 %appdata%\Roaming\Code\Service Worker\CacheStorage
 而 %appdata% 在 Windows 里，是 C:\Users\你的用户名\AppData
+
+linux里边应该是 /home/<user>/config/Code/Service Worker/CacheStorage
 */
 import LocalFile from "../common/LocalFile"
 const home_dir = require('os').homedir()
@@ -14,8 +16,10 @@ const home_dir = require('os').homedir()
  */
 export function autoClearCacheStorage() {
 	try {
-		// console.log('home_dir', home_dir)
-		const cache_dir = LocalFile.join( home_dir, 'AppData/Roaming/Code/Service Worker/CacheStorage' )
+		let cache_dir = LocalFile.join( home_dir, 'AppData/Roaming/Code/Service Worker/CacheStorage' )
+		if(home_dir.substring(0,5) == "/home" || home_dir.substring(0,5) == "/root"){
+			cache_dir = LocalFile.join( home_dir, '.config/Code/Service Worker/CacheStorage' )
+		}
 		cache_dir.clear()
 	} catch (error) {
 		console.log(error)

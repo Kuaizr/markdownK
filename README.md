@@ -1,67 +1,77 @@
 # markdownk README
 
-This is the README for your extension "markdownk". After writing up a brief description, we recommend including the following sections.
+markdownK is a markdown editor, which supported ir mode. This markdown editor is developed by vditor and I add markmap on it and droped some features like grapviz and abc.js ...
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+1. markmap
 
-For example if there is an image subfolder under your extension project workspace:
+```markmap
+# markmap
+## Mind map
+## markdown
+- *italic*
+- **blod**
+- $x+y$
+- `code`
 
-\!\[feature X\]\(images/feature-x.png\)
+```
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+1. mermaid
+
+```mermaid
+graph LR
+1[flowchart] --> 2(Gantt chart) --> 3[/shapes/] --> 4((...))
+```
+
+1. echart
+
+```echarts
+{
+  "title": { "text": "最近 30 天" },
+  "tooltip": { "trigger": "axis", "axisPointer": { "lineStyle": { "width": 0 } } },
+  "legend": { "data": ["帖子", "用户", "回帖"] },
+  "xAxis": [{
+      "type": "category",
+      "boundaryGap": false,
+      "data": ["2019-05-08","2019-05-09","2019-05-10","2019-05-11","2019-05-12","2019-05-13","2019-05-14","2019-05-15","2019-05-16","2019-05-17","2019-05-18","2019-05-19","2019-05-20","2019-05-21","2019-05-22","2019-05-23","2019-05-24","2019-05-25","2019-05-26","2019-05-27","2019-05-28","2019-05-29","2019-05-30","2019-05-31","2019-06-01","2019-06-02","2019-06-03","2019-06-04","2019-06-05","2019-06-06","2019-06-07"],
+      "axisTick": { "show": false },
+      "axisLine": { "show": false }
+  }],
+"yAxis": [{ "type": "value", "axisTick": { "show": false }, "axisLine": { "show": false }, "splitLine": { "lineStyle": { "color": "rgba(0, 0, 0, .38)", "type": "dashed" } } }],
+  "series": [
+    {
+      "name": "帖子", "type": "line", "smooth": true, "itemStyle": { "color": "#d23f31" }, "areaStyle": { "normal": {} }, "z": 3,
+      "data": ["18","14","22","9","7","18","10","12","13","16","6","9","15","15","12","15","8","14","9","10","29","22","14","22","9","10","15","9","9","15","0"]
+    },
+{
+      "name": "用户", "type": "line", "smooth": true, "itemStyle": { "color": "#f1e05a" }, "areaStyle": { "normal": {} }, "z": 2,
+      "data": ["31","33","30","23","16","29","23","37","41","29","16","13","39","23","38","136","89","35","22","50","57","47","36","59","14","23","46","44","51","43","0"]
+    },
+    {
+      "name": "回帖", "type": "line", "smooth": true, "itemStyle": { "color": "#4285f4" }, "areaStyle": { "normal": {} }, "z": 1,
+      "data": ["35","42","73","15","43","58","55","35","46","87","36","15","44","76","130","73","50","20","21","54","48","73","60","89","26","27","70","63","55","37","0"]
+    }
+  ]
+}
+```
+
+1. katex
+
+$$
+\frac{1}{
+  \Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{
+  \frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {
+    1+\frac{e^{-6\pi}}
+    {1+\frac{e^{-8\pi}}{1+\cdots}}
+  }
+}
+
+$$
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+vditor
 
 ## For more information
 
