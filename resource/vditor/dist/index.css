@@ -25,9 +25,10 @@
  *
  */
 .vditor {
-  --border-color: #d1d5da;
+  /* --border-color: #d1d5da; */
   --second-color: rgba(88, 96, 105, 0.36);
-  --panel-background-color: #fff;
+  /* --panel-background-color: #fff; */
+  --panel-background-color: rgba(0, 0, 0, 0);
   --panel-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   --toolbar-background-color: #f6f8fa;
   --toolbar-icon-color: #586069;
@@ -51,9 +52,10 @@
   --ir-paren-color: #008000;
 }
 .vditor--dark {
-  --border-color: #141414;
+  /* --border-color: #141414; */
   --second-color: rgba(185, 185, 185, 0.36);
-  --panel-background-color: #24292e;
+  /* --panel-background-color: #24292e; */
+  --panel-background-color: rgba(0, 0, 0, 0);
   --panel-shadow: 0 1px 2px rgba(255, 255, 255, 0.2);
   --toolbar-background-color: #1d2125;
   --toolbar-icon-color: #b9b9b9;
