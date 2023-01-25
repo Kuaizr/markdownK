@@ -25,7 +25,7 @@
  *
  */
 .vditor {
-  /* --border-color: #d1d5da; */
+  --border-color: #d1d5da;
   --second-color: rgba(88, 96, 105, 0.36);
   /* --panel-background-color: #fff; */
   --panel-background-color: rgba(0, 0, 0, 0);
@@ -52,7 +52,7 @@
   --ir-paren-color: #008000;
 }
 .vditor--dark {
-  /* --border-color: #141414; */
+  --border-color: #141414;
   --second-color: rgba(185, 185, 185, 0.36);
   /* --panel-background-color: #24292e; */
   --panel-background-color: rgba(0, 0, 0, 0);
@@ -328,7 +328,7 @@
 }
 .vditor-toolbar {
   background-color: var(--toolbar-background-color);
-  border-bottom: 1px solid var(--border-color);
+  /* border-bottom: 1px solid var(--border-color); */
   padding: 0 5px;
   line-height: 1;
 }
@@ -489,7 +489,7 @@
 .vditor {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--border-color);
+  /* border: 1px solid var(--border-color); */
   border-radius: 3px;
   box-sizing: border-box;
   font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Hiragino Sans GB", "Microsoft Yahei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
@@ -518,7 +518,7 @@
   min-width: 1px;
   overflow: auto;
   margin-left: -1px;
-  border-left: 1px solid var(--border-color);
+  /* border-left: 1px solid var(--border-color); */
   box-sizing: border-box;
   border-radius: 0 0 3px 0;
   background-color: var(--textarea-background-color);
@@ -568,7 +568,7 @@
   overflow: auto;
   flex: 1;
   min-width: 1px;
-  box-shadow: inset 1px 0 var(--border-color);
+  /* box-shadow: inset 1px 0 var(--border-color); */
   box-sizing: border-box;
   border-radius: 0 0 3px 0;
   padding: 10px;
