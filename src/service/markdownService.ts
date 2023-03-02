@@ -5,77 +5,11 @@ import { copyFileSync, existsSync, lstatSync, mkdirSync, renameSync } from 'fs';
 import { homedir } from 'os';
 import path, { dirname, extname, isAbsolute, join, parse } from 'path';
 import * as vscode from 'vscode';
-import { Holder } from './markdown/holder';
-// import { convertMd } from "./markdown/markdown-pdf";
-// import { fileTypeFromFile } from 'file-type';
-
-export type ExportType = 'pdf' | 'html' | 'docx';
+import { Holder } from '../common/holder';
 
 export class MarkdownService {
 
     constructor(private context: vscode.ExtensionContext) {
-    }
-
-    /**
-     * export markdown to another type
-     * @param type pdf, html, docx 
-     */
-    public async exportMarkdown(uri: vscode.Uri, type: ExportType = 'pdf') {
-        try {
-            if (type == 'pdf') {
-                // 其他类型不用, 导出速度很快
-                vscode.window.showInformationMessage(`Starting export markdown to ${type}.`)
-            }
-            // await convertMd({ markdownFilePath: uri.fsPath, config: this.getConfig(type) })
-            vscode.window.showInformationMessage(`Export markdown to ${type} success!`)
-        } catch (error) {
-            Output.log(error)
-        }
-    }
-
-    public getConfig(type: string = 'pdf') {
-        const config = vscode.workspace.getConfiguration("markdownk");
-        const top = config.get("pdfMarginTop")
-        return {
-            type,
-            "styles": [],
-            // chromium path
-            "executablePath": this.getChromiumPath(),
-            // Set `true` to convert `\n` in paragraphs into `<br>`.
-            "breaks": false,
-            // pdf print option
-            "printBackground": true,
-            format: "A4",
-            margin: { top }
-        };
-    }
-
-    private paths: string[] = [
-        "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
-        "C:\\Program Files (x86)\\Microsoft\\Edge Beta\\Application\\msedge.exe",
-        "C:\\Program Files (x86)\\Microsoft\\Edge Dev\\Application\\msedge.exe",
-        join(homedir(), "AppData\\Local\\Microsoft\\Edge SxS\\Application\\msedge.exe"),
-        "/Applications/Microsoft/Edge.app",
-        "/usr/bin/microsoft-edge",
-    ]
-
-    private getChromiumPath() {
-        const chromiumPath = vscode.workspace.getConfiguration("markdownk").get<string>("chromiumPath")
-        const paths = [chromiumPath]
-        for (const path of paths) {
-            if (existsSync(path)) {
-                console.debug(`using chromium path is ${path}`)
-                return path;
-            }
-        }
-        try {
-            const chromePath = chromeFinder();
-            console.debug(`using chrome path is ${chromePath}`)
-            return chromePath;
-        } catch (e) {
-            vscode.window.showErrorMessage("Not chromium found, export fail.")
-            throw new Error()
-        }
     }
 
     public async loadClipboardImage() {

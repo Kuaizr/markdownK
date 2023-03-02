@@ -2,7 +2,7 @@
   "name": "markdownk",
   "displayName": "markdownK",
   "description": "a markdown editor (wysiwyg), based on vditor (My own modified version)",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "publisher": "kzer",
   "engines": {
     "vscode": "^1.74.0"
@@ -47,15 +47,6 @@
           "type": "boolean",
           "default": true,
           "description": "Support view absolute path image from markdown viewer."
-        },
-        "markdownk.chromiumPath": {
-          "type": "string",
-          "description": "Set the chromium browser location for exporting markdown pdf."
-        },
-        "markdownk.pdfMarginTop": {
-          "type": "integer",
-          "default": 25,
-          "description": "Printed pdf default top margin."
         },
         "markdownk.openOutline": {
           "type": "boolean",

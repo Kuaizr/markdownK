@@ -4,7 +4,7 @@ import { basename, dirname, isAbsolute, parse, resolve } from 'path';
 import * as vscode from 'vscode';
 import { Hanlder } from '../common/handler';
 import { Util } from '../common/util';
-import { Holder } from '../service/markdown/holder';
+import { Holder } from '../common/holder';
 import { MarkdownService } from '../service/markdownService';
 
 /**
@@ -113,15 +113,6 @@ export class MarkdownEditorProvider implements vscode.CustomTextEditorProvider {
         }).on("doSave", async (content) => {
             vscode.commands.executeCommand('workbench.action.files.save');
             this.updateCount(content)
-        }).on("export", () => {
-            vscode.commands.executeCommand('workbench.action.files.save');
-            new MarkdownService(this.context).exportMarkdown(uri)
-        }).on("exportMdToDocx", () => {
-            vscode.commands.executeCommand('workbench.action.files.save');
-            new MarkdownService(this.context).exportMarkdown(uri, 'docx')
-        }).on("exportMdToHtml", () => {
-            vscode.commands.executeCommand('workbench.action.files.save');
-            new MarkdownService(this.context).exportMarkdown(uri, 'html')
         }).on("theme", () => {
             vscode.commands.executeCommand('workbench.action.selectTheme');
         }).on("saveOutline", (enable) => {
