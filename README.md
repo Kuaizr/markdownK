@@ -17,14 +17,14 @@ markdownK is a markdown editor, which supported ir mode. This markdown editor is
 
 ```
 
-1. mermaid
+2. mermaid
 
 ```mermaid
 graph LR
 1[flowchart] --> 2(Gantt chart) --> 3[/shapes/] --> 4((...))
 ```
 
-1. echart
+3. echart
 
 ```echarts
 {
@@ -56,7 +56,7 @@ graph LR
 }
 ```
 
-1. katex
+4. katex
 
 $$
 \frac{1}{
@@ -66,7 +66,6 @@ $$
     {1+\frac{e^{-8\pi}}{1+\cdots}}
   }
 }
-
 $$
 
 ## Requirements
